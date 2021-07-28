@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Join with us 
+	</title>
+    
+<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+<link rel="shortcut icon" href="/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="css\bootstrap.min.css">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        
+</head>
+
+<body style="background-color:#353839">
+    
+    
+        <nav class="navbar navbar-expand-lg sticky-top navbar-collapse navbar-dark bg-dark">
+  <div class="container-fluid" style="position: sticky; top: 0;">
+    <a class="navbar-brand mb-0 h1" href="index.html" style="font-family:pacifico;" >
+        <img src="Resources/camera_lens_PNG66.png" alt="" width="31" height="31" class="d-inline-block align-top">
+        Photographic Heroes</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown" style="font-family:lora">
+      <ul class="navbar-nav">
+        <li class="nav-item ">
+          <a class="nav-link active" aria-current="page" href="form.html">Join Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="gear.html">Gear we use</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Tools we use
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="https://www.adobe.com/products/photoshop.html?promoid=PC1PQQ5T&mv=other">
+                Adobe Phtoshop</a></li>
+            <li><a class="dropdown-item" href="https://www.adobe.com/products/photoshop-lightroom.html">Adobe Lightroom</a></li>
+            <li><a class="dropdown-item" href="https://skylum.com/luminar-ai-b">
+                Luminar AI</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    
+    
+  
+    
+    
+<div style="padding-left: 25px;padding-top: 10px;font-family:lora;color: aliceblue ">
+    
+    
+	<h1>Join the Photographic Heroes community</h1>
+
+
+<form>
+    
+    
+         <div class="mb-3" style="width:40%;height: auto ">
+    <label for="exampleInputEmail1" class="form-label">Name</label>
+    <input type="name" class="form-control" id="name" aria-describedby="name">
+  </div>
+
+    
+  <div class="mb-3" style="width:40%;height: auto ">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text" style="color: aliceblue">We'll never share your email with anyone else.</div>
+  </div>
+ <div class="mb-3" style="width:40%;height: auto ">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+      <div class="col-auto">
+    <span id="passwordHelpInline" class="form-text" style="color: aliceblue">
+      Must be 8-20 characters long.(Must include lowercrease, uppercrease, number, symbol)
+    </span>
+  </div>
+  </div>
+    
+    <div class="mb-3" style="width:40%;height: auto ">
+    <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+      
+  </div>
+    <br>
+    <select class="form-select" aria-label="Default select example" style="width:40%;height: auto ">
+  <option selected>Select your Reigon</option>
+  <option value="1">Africa</option>
+  <option value="2">North America</option>
+  <option value="3">South America</option>
+        <option value="4">Europe</option>
+        <option value="5">Australia</option>
+        <option value="6">South Asia</option>
+        <option value="7">East Asia</option>
+        <option value="8">South East Asia</option>
+</select>
+    
+    <br>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Subscribe to our weekly Newsletter</label>
+  </div>
+    
+    
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Agree to our Terms & Conditions</label>
+  </div>
+    
+  <button type="submit" class="btn btn-dark" style="colo">Sign me Up</button>
+    
+</form>
+
+<br>
+
+    
+      <div id="my-signin2"></div>
+    
+     <script>
+    function onSuccess(googleUser) {
+      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+    }
+    function onFailure(error) {
+      console.log(error);
+    }
+    function renderButton() {
+      gapi.signin2.render('my-signin2', {
+        'scope': 'profile email',
+        'width': 240,
+        'height': 50,
+        'longtitle': true,
+        'theme': 'dark',
+        'onsuccess': onSuccess,
+        'onfailure': onFailure
+      });
+    }
+  </script>
+
+  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    
+    
+    
+    
+    
+    
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
